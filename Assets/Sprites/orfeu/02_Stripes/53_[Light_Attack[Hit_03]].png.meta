@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 173bc187cdb27534baea9995aed3cb12
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2172829375606779374
+    second: 53_[Light_Attack[Hit_03]]_0
+  - first:
+      213: 3552314192156204829
+    second: 53_[Light_Attack[Hit_03]]_1
+  - first:
+      213: -1539138517920165921
+    second: 53_[Light_Attack[Hit_03]]_2
+  - first:
+      213: -1603625030608700945
+    second: 53_[Light_Attack[Hit_03]]_3
+  - first:
+      213: -1939152829855045989
+    second: 53_[Light_Attack[Hit_03]]_4
+  - first:
+      213: -5670180600225081514
+    second: 53_[Light_Attack[Hit_03]]_5
+  - first:
+      213: 6333444131279265907
+    second: 53_[Light_Attack[Hit_03]]_6
+  - first:
+      213: -8079275405401797255
+    second: 53_[Light_Attack[Hit_03]]_7
+  - first:
+      213: -1567940989229314626
+    second: 53_[Light_Attack[Hit_03]]_8
+  - first:
+      213: 7294415537596397708
+    second: 53_[Light_Attack[Hit_03]]_9
+  - first:
+      213: -7863178031434784012
+    second: 53_[Light_Attack[Hit_03]]_10
+  - first:
+      213: -8871744295228526967
+    second: 53_[Light_Attack[Hit_03]]_11
+  - first:
+      213: -1047347323685060791
+    second: 53_[Light_Attack[Hit_03]]_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed63921ec0772e10800000000000000
+      internalID: 2172829375606779374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 38
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f9c02dfea5c4130800000000000000
+      internalID: 3552314192156204829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf4f333ca1e3aae0800000000000000
+      internalID: -1539138517920165921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9b4a1f787ceb9e0800000000000000
+      internalID: -1603625030608700945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96eb4b76ceb615e0800000000000000
+      internalID: -1939152829855045989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 0
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657d54739c87f41b0800000000000000
+      internalID: -5670180600225081514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 370eea1a1e9e4e750800000000000000
+      internalID: 6333444131279265907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 0
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97dc97a13d5a0ef80800000000000000
+      internalID: -8079275405401797255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_8
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 0
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd46344afd8d3ae0800000000000000
+      internalID: -1567940989229314626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_9
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 0
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88f582b848fa3560800000000000000
+      internalID: 7294415537596397708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_10
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 0
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2aca6cd3160e290800000000000000
+      internalID: -7863178031434784012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_11
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 6
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e2ec8619b31e480800000000000000
+      internalID: -8871744295228526967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 53_[Light_Attack[Hit_03]]_12
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 0
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94fbb4f78231771f0800000000000000
+      internalID: -1047347323685060791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      53_[Light_Attack[Hit_03]]_0: 2172829375606779374
+      53_[Light_Attack[Hit_03]]_1: 3552314192156204829
+      53_[Light_Attack[Hit_03]]_10: -7863178031434784012
+      53_[Light_Attack[Hit_03]]_11: -8871744295228526967
+      53_[Light_Attack[Hit_03]]_12: -1047347323685060791
+      53_[Light_Attack[Hit_03]]_2: -1539138517920165921
+      53_[Light_Attack[Hit_03]]_3: -1603625030608700945
+      53_[Light_Attack[Hit_03]]_4: -1939152829855045989
+      53_[Light_Attack[Hit_03]]_5: -5670180600225081514
+      53_[Light_Attack[Hit_03]]_6: 6333444131279265907
+      53_[Light_Attack[Hit_03]]_7: -8079275405401797255
+      53_[Light_Attack[Hit_03]]_8: -1567940989229314626
+      53_[Light_Attack[Hit_03]]_9: 7294415537596397708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

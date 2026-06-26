@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 98d8f87068aedc84b92673b5636970b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5084133549485065258
+    second: sprite_elevator-body_48x48_16-frames_0
+  - first:
+      213: -4940365980611880097
+    second: sprite_elevator-body_48x48_16-frames_1
+  - first:
+      213: 4879109311933593086
+    second: sprite_elevator-body_48x48_16-frames_2
+  - first:
+      213: 8288438529366327498
+    second: sprite_elevator-body_48x48_16-frames_3
+  - first:
+      213: 6525497962186690094
+    second: sprite_elevator-body_48x48_16-frames_4
+  - first:
+      213: 2637018915306378300
+    second: sprite_elevator-body_48x48_16-frames_5
+  - first:
+      213: -4403383325468847733
+    second: sprite_elevator-body_48x48_16-frames_6
+  - first:
+      213: -335659959286568340
+    second: sprite_elevator-body_48x48_16-frames_7
+  - first:
+      213: -4458322882770989398
+    second: sprite_elevator-body_48x48_16-frames_8
+  - first:
+      213: 8754703669510034134
+    second: sprite_elevator-body_48x48_16-frames_9
+  - first:
+      213: -8035251165426084347
+    second: sprite_elevator-body_48x48_16-frames_10
+  - first:
+      213: -7107970506182475853
+    second: sprite_elevator-body_48x48_16-frames_11
+  - first:
+      213: 6794757740830281980
+    second: sprite_elevator-body_48x48_16-frames_12
+  - first:
+      213: -7702773559953779568
+    second: sprite_elevator-body_48x48_16-frames_13
+  - first:
+      213: 3115534755025009378
+    second: sprite_elevator-body_48x48_16-frames_14
+  - first:
+      213: -621102592534034303
+    second: sprite_elevator-body_48x48_16-frames_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2404bfb6887e8640800000000000000
+      internalID: 5084133549485065258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b5439d05b407bb0800000000000000
+      internalID: -4940365980611880097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef53a1e811416b340800000000000000
+      internalID: 4879109311933593086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac08a8dade2760370800000000000000
+      internalID: 8288438529366327498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_4
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 6
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2e4ca2b2d93f8a50800000000000000
+      internalID: 6525497962186690094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3492d06bb2989420800000000000000
+      internalID: 2637018915306378300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b811d83123a04e2c0800000000000000
+      internalID: -4403383325468847733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_7
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ae661ab0f775bf0800000000000000
+      internalID: -335659959286568340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_8
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 6
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae807695fad022c0800000000000000
+      internalID: -4458322882770989398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d254fe5a94fe7970800000000000000
+      internalID: 8754703669510034134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5061cbb33ad0d7090800000000000000
+      internalID: -8035251165426084347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_11
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf3a09fb7a6b5d90800000000000000
+      internalID: -7107970506182475853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_12
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 6
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf056054a24db4e50800000000000000
+      internalID: 6794757740830281980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_13
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0941fad12404a1590800000000000000
+      internalID: -7702773559953779568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_14
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea36a65a5a9c3b20800000000000000
+      internalID: 3115534755025009378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_elevator-body_48x48_16-frames_15
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 6
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1884fea9b766167f0800000000000000
+      internalID: -621102592534034303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprite_elevator-body_48x48_16-frames_0: 5084133549485065258
+      sprite_elevator-body_48x48_16-frames_1: -4940365980611880097
+      sprite_elevator-body_48x48_16-frames_10: -8035251165426084347
+      sprite_elevator-body_48x48_16-frames_11: -7107970506182475853
+      sprite_elevator-body_48x48_16-frames_12: 6794757740830281980
+      sprite_elevator-body_48x48_16-frames_13: -7702773559953779568
+      sprite_elevator-body_48x48_16-frames_14: 3115534755025009378
+      sprite_elevator-body_48x48_16-frames_15: -621102592534034303
+      sprite_elevator-body_48x48_16-frames_2: 4879109311933593086
+      sprite_elevator-body_48x48_16-frames_3: 8288438529366327498
+      sprite_elevator-body_48x48_16-frames_4: 6525497962186690094
+      sprite_elevator-body_48x48_16-frames_5: 2637018915306378300
+      sprite_elevator-body_48x48_16-frames_6: -4403383325468847733
+      sprite_elevator-body_48x48_16-frames_7: -335659959286568340
+      sprite_elevator-body_48x48_16-frames_8: -4458322882770989398
+      sprite_elevator-body_48x48_16-frames_9: 8754703669510034134
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
