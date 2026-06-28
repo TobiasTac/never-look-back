@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rig;
     private Animator anim;
-    private float movement;
+    public float movement;
     private MovingPlatform currentPlatform;
 
     // Referência ao fantasma
@@ -25,6 +25,13 @@ public class Player : MonoBehaviour
 
     [Header("Orientação inicial")]
     public bool startFacingRight = true;
+
+    [Header("Gelo")]
+    public LayerMask iceLayer;
+    public float iceAcceleration = 0.3f;
+    public float iceDeceleration = 0.05f;
+
+private bool isOnIce = false;
 
     void Start()
     {
@@ -81,12 +88,22 @@ public class Player : MonoBehaviour
         if (currentPlatform != null)
             platformVelocityX = currentPlatform.Movement.x / Time.fixedDeltaTime;
 
-        rig.linearVelocity = new Vector2((movement * speed) + platformVelocityX, rig.linearVelocity.y);
+        if (isOnIce)
+        {
+            // No gelo — acelera e desacelera suavemente
+            float targetVelocityX = (movement * speed) + platformVelocityX;
+            float lerpFactor = Mathf.Abs(movement) > 0.01f ? iceAcceleration : iceDeceleration;
+            float newVelocityX = Mathf.Lerp(rig.linearVelocity.x, targetVelocityX, lerpFactor);
+            rig.linearVelocity = new Vector2(newVelocityX, rig.linearVelocity.y);
+        }
+        else
+        {
+            // Normal
+            rig.linearVelocity = new Vector2((movement * speed) + platformVelocityX, rig.linearVelocity.y);
+        }
 
-        // Só vira o sprite se estiver se movendo
         if (Mathf.Abs(movement) > 0.01f)
         {
-            // Usa o facingDirection para determinar qual lado é "frente"
             bool movingForward = (facingDirection == 1 && movement > 0) ||
                                 (facingDirection == -1 && movement < 0);
 
@@ -147,20 +164,33 @@ public class Player : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        bool isGround = ((1 << collision.gameObject.layer) & groundLayer) != 0;
+        bool isIce = ((1 << collision.gameObject.layer) & iceLayer) != 0;
+
+        if (isGround || isIce)
         {
-            isJumping = false;
+            // Só reseta o pulo se a colisão for por baixo (normal apontando para cima)
+            if (collision.contacts[0].normal.y > 0.5f)
+                isJumping = false;
 
             MovingPlatform platform = collision.gameObject.GetComponent<MovingPlatform>();
             if (platform != null && collision.contacts[0].normal.y > 0.5f)
                 currentPlatform = platform;
         }
+
+        if (isIce && collision.contacts[0].normal.y > 0.5f)
+            isOnIce = true;
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
+        bool isIce = ((1 << collision.gameObject.layer) & iceLayer) != 0;
+
         if (currentPlatform != null && collision.gameObject == currentPlatform.gameObject)
             currentPlatform = null;
+
+        if (isIce)
+            isOnIce = false;
     }
     public void TriggerDeath()
     {

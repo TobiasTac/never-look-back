@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56032629}
   - component: {fileID: 56032630}
+  - component: {fileID: 56032633}
   m_Layer: 0
   m_Name: ice level demo_6 (8)
   m_TagString: Untagged
@@ -210,6 +211,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &56032633
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56032628}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &94075577
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94075578}
   - component: {fileID: 94075579}
+  - component: {fileID: 94075581}
   m_Layer: 0
   m_Name: ice level demo_23 (1)
   m_TagString: Untagged
@@ -301,6 +341,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &94075581
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94075577}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &130609003
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +623,7 @@ GameObject:
   - component: {fileID: 278841867}
   - component: {fileID: 278841868}
   m_Layer: 0
-  m_Name: Dark Portal-Spinning_0 (1)
+  m_Name: Portal-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,7 +698,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3798168244728543534, guid: b85e2258d88d8204dae3bbdb47e2233b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -668,7 +746,7 @@ MonoBehaviour:
   freezeTimeOnExit: 0.3
   openDuration: 0.4
   closeDuration: 0.3
-  originalScale: {x: 0, y: 0, z: 0}
+  originalScale: {x: 2.31, y: 2.31, z: 2.31}
 --- !u!58 &278841868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -715,6 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318437660}
   - component: {fileID: 318437661}
+  - component: {fileID: 318437664}
   m_Layer: 0
   m_Name: ice level demo_6 (12)
   m_TagString: Untagged
@@ -796,6 +875,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &318437664
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318437659}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &332875483
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,6 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332875484}
   - component: {fileID: 332875485}
+  - component: {fileID: 332875488}
   m_Layer: 0
   m_Name: ice level demo_6 (5)
   m_TagString: Untagged
@@ -887,6 +1005,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &332875488
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332875483}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &410076224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451838369}
   - component: {fileID: 451838370}
+  - component: {fileID: 451838373}
   m_Layer: 0
   m_Name: ice level demo_6 (2)
   m_TagString: Untagged
@@ -1279,6 +1436,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &451838373
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451838368}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &463736500
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1489,7 @@ GameObject:
   - component: {fileID: 463736506}
   - component: {fileID: 463736505}
   - component: {fileID: 463736504}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: MobilePlataform-1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,6 +1951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529610283}
   - component: {fileID: 529610284}
+  - component: {fileID: 529610287}
   m_Layer: 0
   m_Name: ice level demo_6 (3)
   m_TagString: Untagged
@@ -1837,6 +2033,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &529610287
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529610282}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &595110630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +2081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595110631}
   - component: {fileID: 595110632}
+  - component: {fileID: 595110634}
   m_Layer: 0
   m_Name: ice level demo_23 (2)
   m_TagString: Untagged
@@ -1928,6 +2163,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &595110634
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595110630}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2368,7 @@ GameObject:
   - component: {fileID: 645597608}
   - component: {fileID: 645597607}
   - component: {fileID: 645597606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceBroke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2443,6 +2716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660518025}
   - component: {fileID: 660518026}
+  - component: {fileID: 660518029}
   m_Layer: 0
   m_Name: ice level demo_6 (4)
   m_TagString: Untagged
@@ -2524,6 +2798,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &660518029
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660518024}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1001 &699923973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2577,6 +2889,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1655908458}
     - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: iceAcceleration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: iceDeceleration
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: iceLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
       propertyPath: startFacingRight
       value: 0
       objectReference: {fileID: 0}
@@ -2603,6 +2927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706985126}
   - component: {fileID: 706985127}
+  - component: {fileID: 706985130}
   m_Layer: 0
   m_Name: ice level demo_6 (10)
   m_TagString: Untagged
@@ -2684,6 +3009,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &706985130
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706985125}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1001 &711734797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2811,6 +3174,128 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+--- !u!1 &777825528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777825529}
+  - component: {fileID: 777825531}
+  - component: {fileID: 777825530}
+  m_Layer: 0
+  m_Name: SpikesGameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777825529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777825528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.24, y: -3.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1575119467}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777825530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777825528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e81bf119db6b942b9f8174a5eefc15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpikeTilemap
+--- !u!60 &777825531
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777825528}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.07846296, y: 0.025816679}
+      - {x: -0.35738778, y: 0.61214185}
+      - {x: -0.72895813, y: 0.04248309}
+      - {x: -0.93690956, y: 0.37641644}
+      - {x: -1.5653644, y: -0.02826953}
+      - {x: -1.9609499, y: 0.08805084}
+      - {x: -2.4281673, y: 0.97793674}
+      - {x: -3.0379322, y: 0.025983334}
+      - {x: -3.417716, y: 0.6542945}
+      - {x: -4.164586, y: -0.17989254}
+      - {x: -4.625304, y: 1.0163667}
+      - {x: -5.236859, y: -0.015124083}
+      - {x: -5.6652513, y: 0.5557065}
+      - {x: -6.0613484, y: 0.1789782}
+      - {x: -6.443734, y: 1.2454848}
+      - {x: -6.963502, y: 0.65725017}
+      - {x: -6.006757, y: -0.07508707}
+      - {x: -1.8890347, y: -0.91452396}
+      - {x: 6.6928115, y: -0.9573386}
+      - {x: 5.8338933, y: 0.8949919}
+      - {x: 5.224384, y: 0.33559418}
+      - {x: 4.454412, y: -0.10220766}
+      - {x: 3.9433217, y: 0.8643279}
+      - {x: 3.3922136, y: 0.09733057}
+      - {x: 3.071577, y: 0.5029042}
+      - {x: 2.3920534, y: -0.025370598}
+      - {x: 1.7659436, y: 1.4417918}
+      - {x: 1.2218124, y: 0.7220521}
+      - {x: 1.0882, y: 0.006781101}
+      - {x: 0.7741089, y: 0.69240373}
+  m_UseDelaunayMesh: 1
 --- !u!1 &858189240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2821,6 +3306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858189241}
   - component: {fileID: 858189242}
+  - component: {fileID: 858189245}
   m_Layer: 0
   m_Name: ice level demo_6 (1)
   m_TagString: Untagged
@@ -2902,6 +3388,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &858189245
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858189240}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &914605305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3353,6 +3877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1185015451}
   - component: {fileID: 1185015452}
+  - component: {fileID: 1185015455}
   m_Layer: 0
   m_Name: ice level demo_6 (9)
   m_TagString: Untagged
@@ -3434,6 +3959,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1185015455
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185015450}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1210021117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3463,11 +4026,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2131426355}
   - {fileID: 1557604648}
   - {fileID: 1961940205}
   - {fileID: 278841866}
   - {fileID: 1408060776}
+  - {fileID: 2131426355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273295194
@@ -3480,6 +4043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1273295195}
   - component: {fileID: 1273295196}
+  - component: {fileID: 1273295198}
   m_Layer: 0
   m_Name: ice level demo_23
   m_TagString: Untagged
@@ -3561,6 +4125,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1273295198
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273295194}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1408060773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,7 +4176,7 @@ GameObject:
   - component: {fileID: 1408060774}
   - component: {fileID: 1408060777}
   m_Layer: 0
-  m_Name: Dark Portal-Spinning_0 (2)
+  m_Name: Portal-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3649,7 +4251,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3798168244728543534, guid: b85e2258d88d8204dae3bbdb47e2233b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3694,10 +4296,10 @@ MonoBehaviour:
   throwDirection: {x: 0, y: -1}
   throwForce: 4
   faceRightOnExit: 1
-  freezeTimeOnExit: 0.3
+  freezeTimeOnExit: 0
   openDuration: 0.4
   closeDuration: 0.3
-  originalScale: {x: 0, y: 0, z: 0}
+  originalScale: {x: 2.31, y: 2.31, z: 2.31}
 --- !u!1 &1429813543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,7 +4348,7 @@ GameObject:
   - component: {fileID: 1438297366}
   - component: {fileID: 1438297365}
   - component: {fileID: 1438297364}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: MobilePlataform-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4035,6 +4637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510735415}
   - component: {fileID: 1510735416}
+  - component: {fileID: 1510735419}
   m_Layer: 0
   m_Name: ice level demo_6 (6)
   m_TagString: Untagged
@@ -4116,6 +4719,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1510735419
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510735414}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1557604646
 GameObject:
   m_ObjectHideFlags: 0
@@ -4130,7 +4771,7 @@ GameObject:
   - component: {fileID: 1557604650}
   - component: {fileID: 1557604651}
   m_Layer: 0
-  m_Name: Dark Portal-Spinning_0
+  m_Name: Portal-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4183,7 +4824,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3798168244728543534, guid: b85e2258d88d8204dae3bbdb47e2233b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4253,7 +4894,7 @@ MonoBehaviour:
   freezeTimeOnExit: 0.3
   openDuration: 0.4
   closeDuration: 0.3
-  originalScale: {x: 0, y: 0, z: 0}
+  originalScale: {x: 2.31, y: 2.31, z: 2.31}
 --- !u!58 &1557604651
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4300,6 +4941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1571852012}
   - component: {fileID: 1571852013}
+  - component: {fileID: 1571852015}
   m_Layer: 0
   m_Name: ice level demo_23 (3)
   m_TagString: Untagged
@@ -4381,6 +5023,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1571852015
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571852011}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1575119466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,6 +5107,7 @@ Transform:
   - {fileID: 94075578}
   - {fileID: 595110631}
   - {fileID: 1571852012}
+  - {fileID: 777825529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636758944
@@ -4439,6 +5120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1636758945}
   - component: {fileID: 1636758946}
+  - component: {fileID: 1636758949}
   m_Layer: 0
   m_Name: ice level demo_6
   m_TagString: Untagged
@@ -4520,6 +5202,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1636758949
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636758944}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!114 &1655908458 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 582137337478494820, guid: 1d645512977ec33408c4ac343bb1a2fb, type: 3}
@@ -4656,7 +5376,7 @@ GameObject:
   - component: {fileID: 1711802807}
   - component: {fileID: 1711802806}
   - component: {fileID: 1711802805}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: Static
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5212,6 +5932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836753321}
   - component: {fileID: 1836753322}
+  - component: {fileID: 1836753325}
   m_Layer: 0
   m_Name: ice level demo_6 (7)
   m_TagString: Untagged
@@ -5293,6 +6014,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1836753325
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836753320}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1957908024
 GameObject:
   m_ObjectHideFlags: 0
@@ -5303,6 +6062,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957908025}
   - component: {fileID: 1957908026}
+  - component: {fileID: 1957908029}
   m_Layer: 0
   m_Name: ice level demo_6 (11)
   m_TagString: Untagged
@@ -5384,6 +6144,44 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1839735485 &1957908029
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957908024}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1 &1961940204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5396,9 +6194,8 @@ GameObject:
   - component: {fileID: 1961940208}
   - component: {fileID: 1961940207}
   - component: {fileID: 1961940206}
-  - component: {fileID: 1961940209}
   m_Layer: 0
-  m_Name: Dark Portal-Spinning_0 (3)
+  m_Name: Portal-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5435,12 +6232,12 @@ MonoBehaviour:
   pullSpeed: 5
   activateDistance: 2
   throwDirection: {x: 0, y: -1}
-  throwForce: 4
-  faceRightOnExit: 0
+  throwForce: 6
+  faceRightOnExit: 1
   freezeTimeOnExit: 0.3
   openDuration: 0.4
   closeDuration: 0.3
-  originalScale: {x: 0, y: 0, z: 0}
+  originalScale: {x: 2.31, y: 2.31, z: 2.31}
 --- !u!95 &1961940207
 Animator:
   serializedVersion: 7
@@ -5510,7 +6307,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3798168244728543534, guid: b85e2258d88d8204dae3bbdb47e2233b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5522,42 +6319,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &1961940209
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961940204}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.00000009685755, y: 0}
-  m_Radius: 0.25500005
 --- !u!1 &1971513167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5976,7 +6737,7 @@ GameObject:
   - component: {fileID: 2131426356}
   - component: {fileID: 2131426357}
   m_Layer: 0
-  m_Name: Portal-Spinning-Yellow_0
+  m_Name: Exit Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6206,9 +6967,9 @@ SceneRoots:
   - {fileID: 2000203743}
   - {fileID: 1575119467}
   - {fileID: 130609005}
+  - {fileID: 1210021118}
   - {fileID: 1429813544}
   - {fileID: 1815682010}
-  - {fileID: 1210021118}
   - {fileID: 640453595}
   - {fileID: 699923973}
   - {fileID: 2143628194}
