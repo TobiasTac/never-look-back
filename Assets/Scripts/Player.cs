@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private bool isDead = false;
     private bool isJumping;
     public bool canMove = true;
+    public bool IsDead => isDead;
 
     private Rigidbody2D rig;
     private Animator anim;
