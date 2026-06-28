@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
     public float iceAcceleration = 0.3f;
     public float iceDeceleration = 0.05f;
 
+    [Header("Verificação de chão")]
+    public Transform groundCheck; // ponto embaixo do player
+    public float groundCheckRadius = 0.1f;
+
 private bool isOnIce = false;
 
     void Start()
@@ -76,8 +80,28 @@ private bool isOnIce = false;
 
     void FixedUpdate()
     {
+        CheckGround();
         Move();
         UpdateAnimations();
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+    }
+
+    void CheckGround()
+    {
+        bool onGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer) ||
+                        Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, iceLayer);
+
+        if (onGround)
+            isJumping = false;
+        else if (!onGround && rig.linearVelocity.y < -0.1f)
+            isJumping = true; // caindo — bloqueia o pulo
     }
 
     void Move()
