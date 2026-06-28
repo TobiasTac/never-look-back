@@ -23,10 +23,17 @@ public class Player : MonoBehaviour
     // Referência ao fantasma
     public Ghost ghost;
 
+    [Header("Orientação inicial")]
+    public bool startFacingRight = true;
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        // Define orientação inicial
+        facingDirection = startFacingRight ? 1 : -1;
+        transform.eulerAngles = new Vector3(0, startFacingRight ? 0 : 180, 0);
 
         var playerInput = GetComponent<PlayerInput>();
         playerInput.actions.Disable();
