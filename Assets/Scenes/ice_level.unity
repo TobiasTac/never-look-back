@@ -2235,7 +2235,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.6697668, g: 0.8179145, b: 0.8207547, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -6959,6 +6959,10 @@ PrefabInstance:
       propertyPath: deathText
       value: 
       objectReference: {fileID: 711734799}
+    - target: {fileID: 582137337478494820, guid: 1d645512977ec33408c4ac343bb1a2fb, type: 3}
+      propertyPath: globalLight
+      value: 
+      objectReference: {fileID: 619394801}
     - target: {fileID: 1966465093317953843, guid: 1d645512977ec33408c4ac343bb1a2fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.25
