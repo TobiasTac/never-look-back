@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Ghost : MonoBehaviour
 {
@@ -93,7 +94,7 @@ public class Ghost : MonoBehaviour
 
     void FreezeScene()
     {
-        foreach (Rigidbody2D rb in FindObjectsByType<Rigidbody2D>(FindObjectsSortMode.None))
+        foreach (Rigidbody2D rb in FindObjectsByType<Rigidbody2D>(FindObjectsInactive.Exclude))
         {
             if (rb.gameObject != gameObject)
             {
@@ -103,36 +104,42 @@ public class Ghost : MonoBehaviour
             }
         }
 
-        foreach (Animator a in FindObjectsByType<Animator>(FindObjectsSortMode.None))
+        foreach (Animator a in FindObjectsByType<Animator>(FindObjectsInactive.Exclude))
         {
             if (a.gameObject != gameObject)
                 a.speed = 0f;
         }
     }
 
+    public bool reloadOnDeath = true; // desmarque no Inspector na fase final
+
+    private IEnumerator ReloadAfterDeath()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        
+        if (reloadOnDeath)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private IEnumerator DeathSequence()
     {
-        // 1. Slow motion suave
         yield return StartCoroutine(SlowMotionRoutine());
 
-        // 2. Freeza a cena
         FreezeScene();
 
-        // 3. Shake de câmera + texto aparecem juntos
         StartCoroutine(TextFadeRoutine());
         StartCoroutine(LightFadeRoutine());
 
-        // 4. Aguarda animação "dead" tocar
         yield return new WaitForSecondsRealtime(0.2f);
 
-        // 5. Fade out + scale do ghost juntos
         yield return StartCoroutine(GhostFadeAndScaleRoutine());
 
         yield return new WaitForSecondsRealtime(0.3f);
 
-        // 6. Restaura o timeScale antes de recarregar
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        // Usa o ReloadAfterDeath para respeitar o reloadOnDeath
+        yield return StartCoroutine(ReloadAfterDeath());
     }
 
     private IEnumerator SlowMotionRoutine()

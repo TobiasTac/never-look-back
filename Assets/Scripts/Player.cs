@@ -171,14 +171,18 @@ private bool isOnIce = false;
         canMove = false;
         rig.linearVelocity = Vector2.zero;
 
-        // Vira o sprite para trás
         transform.eulerAngles = new Vector3(0, facingDirection == 1 ? 180 : 0, 0);
 
-        // Aguarda um momento com o personagem virado
         yield return new WaitForSeconds(0.5f);
 
-        if (ghost != null)
-            ghost.Die();
+        if (ghost == null)
+        {
+            // Ghost não está na cena, apenas recarrega
+            ReloadScene();
+            yield break;
+        }
+
+        ghost.Die();
     }
     private IEnumerator RecoverControlRoutine(float time)
     {
@@ -231,5 +235,10 @@ private bool isOnIce = false;
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public int GetFacingDirection()
+    {
+        return facingDirection;
     }
 }
