@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &51091755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51091756}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &51091756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51091755}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.142, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1552475902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86310290
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,13 +557,28 @@ PrefabInstance:
       propertyPath: ghost
       value: 
       objectReference: {fileID: 1412985487}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 51091756}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6970458589004901337, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3192936748996057300, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 51091756}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
 --- !u!1 &223972300
@@ -4238,6 +4284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+--- !u!4 &1552475902 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3192936748996057300, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+  m_PrefabInstance: {fileID: 199827541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1596945620
 GameObject:
   m_ObjectHideFlags: 0
@@ -4789,7 +4840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3780910783617056957, guid: d57384fdfc7220247bf7ef16c3b96b23, type: 3}
       propertyPath: activationRange
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4397125790020669893, guid: d57384fdfc7220247bf7ef16c3b96b23, type: 3}
       propertyPath: m_Name
@@ -4933,7 +4984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WindZone
   windType: 0
   windDirection: {x: 1, y: 0}
-  minWindForce: 10
+  minWindForce: 15
   maxWindForce: 60
   windChangeDuration: 3
 --- !u!1 &1720284154

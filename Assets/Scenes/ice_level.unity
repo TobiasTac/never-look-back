@@ -2234,7 +2234,7 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6697668, g: 0.8179145, b: 0.8207547, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
@@ -2293,6 +2293,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3780910783617056957, guid: d57384fdfc7220247bf7ef16c3b96b23, type: 3}
+      propertyPath: activationRange
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4397125790020669893, guid: d57384fdfc7220247bf7ef16c3b96b23, type: 3}
       propertyPath: m_Name
       value: Locais_Reveladores
@@ -2889,6 +2893,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1655908458}
     - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385831303844986231, guid: a93f52fc1f54b9047894c0ec304a5042, type: 3}
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 943950516}
@@ -3072,7 +3080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1753906429711488445, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4821381242901688861, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
       propertyPath: m_Pivot.x
@@ -4341,7 +4349,7 @@ MonoBehaviour:
   pullSpeed: 5
   activateDistance: 2
   throwDirection: {x: 0, y: -1}
-  throwForce: 4
+  throwForce: 6
   faceRightOnExit: 1
   freezeTimeOnExit: 0
   openDuration: 0.4
@@ -6934,7 +6942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a18f9b7328243498fe9e4e056631c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelExit
-  nextSceneName: 
+  nextSceneName: spike_level
   fadeImage: {fileID: 711734798}
   fadeDuration: 1
   moveToCenterDuration: 0.3

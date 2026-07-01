@@ -57,7 +57,8 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (isCoolingDown || !other.CompareTag("Player")) return;
+    Debug.Log($"isCoolingDown: {isCoolingDown}");
+    if (isCoolingDown || !other.CompareTag("Player")) return;
 
         Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
         Player player = other.GetComponent<Player>();
@@ -124,7 +125,7 @@ public class Portal : MonoBehaviour
     private IEnumerator CooldownRoutine()
     {
         isCoolingDown = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         isCoolingDown = false;
     }
 

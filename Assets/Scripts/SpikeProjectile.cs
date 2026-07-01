@@ -9,6 +9,7 @@ public class SpikeProjectile : MonoBehaviour
     public Transform detectionZone;
 
     private bool fired = false;
+    private bool canCollide = false;
     private Rigidbody2D rig;
 
     [Header("Área de Detecção")]
@@ -25,54 +26,61 @@ public class SpikeProjectile : MonoBehaviour
 
     void Update()
     {
-        if (fired) return;
+        if (fired)
+        {
+            // Destrói ao sair dos limites da câmera
+            Vector3 screenPos = Camera.main.WorldToViewportPoint(transform.position);
+            if (screenPos.x < -0.1f || screenPos.x > 1.1f ||
+                screenPos.y < -0.1f || screenPos.y > 1.1f)
+                Destroy(gameObject);
+            return;
+        }
 
-    Vector2 center = detectionZone != null
-        ? (Vector2)detectionZone.position
-        : (Vector2)transform.position;
+        Vector2 center = detectionZone != null
+            ? (Vector2)detectionZone.position
+            : (Vector2)transform.position;
 
-    Vector2 boxCenter = center + new Vector2(
-        (minX + maxX) / 2f,
-        (minY + maxY) / 2f
-    );
+        Vector2 boxCenter = center + new Vector2(
+            (minX + maxX) / 2f,
+            (minY + maxY) / 2f
+        );
 
-    Vector2 boxSize = new Vector2(
-        maxX - minX,
-        maxY - minY
-    );
+        Vector2 boxSize = new Vector2(
+            maxX - minX,
+            maxY - minY
+        );
 
-    Collider2D hit = Physics2D.OverlapBox(
-        boxCenter,
-        boxSize,
-        detectionAngle,
-        LayerMask.GetMask("Player")
-    );
+        Collider2D hit = Physics2D.OverlapBox(
+            boxCenter,
+            boxSize,
+            detectionAngle,
+            LayerMask.GetMask("Player")
+        );
 
         if (hit != null)
             Fire();
     }
+
     void Fire()
     {
         fired = true;
         rig.linearVelocity = fireDirection.normalized * fireSpeed;
+        Invoke(nameof(EnableCollision), 0.1f);
+    }
+
+    void EnableCollision()
+    {
+        canCollide = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Mata o player (isto funciona quer o espinho esteja parado ou em movimento)
-        if (other.CompareTag("Player"))
-        {
-            Player player = other.GetComponent<Player>();
-            if (player != null) player.TriggerDeath();
-            Destroy(gameObject);
-            return;
-        }
+        if (!canCollide) return;
+        if (!other.CompareTag("Player")) return;
 
-        // CORREÇÃO: Só desaparece ao bater em paredes/chão SE já tiver sido disparado!
-        if (fired && !other.CompareTag("Ghost"))
-        {
-            Destroy(gameObject);
-        }
+        Player player = other.GetComponent<Player>();
+        if (player != null) player.TriggerDeath();
+        Destroy(gameObject);
     }
 
     void OnDrawGizmosSelected()
