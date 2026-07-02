@@ -1363,6 +1363,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022530155634036865, guid: f2312dfb26f5eaf43bf838c0cb94e95a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022530155634036865, guid: f2312dfb26f5eaf43bf838c0cb94e95a, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022530155634036865, guid: f2312dfb26f5eaf43bf838c0cb94e95a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022530155634036865, guid: f2312dfb26f5eaf43bf838c0cb94e95a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 2400
+      objectReference: {fileID: 0}
     - target: {fileID: 9038831107929916771, guid: f2312dfb26f5eaf43bf838c0cb94e95a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2949,7 +2965,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.4545455
+  orthographic size: 6.1363635
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5933,6 +5949,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6428498971903590112, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428498971903590112, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428498971903590112, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 2400
+      objectReference: {fileID: 0}
     - target: {fileID: 6626558752085156156, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -8440,6 +8468,22 @@ PrefabInstance:
     - target: {fileID: 5586486163518821354, guid: 0c16780b049b2ae479675b721b4d0782, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479678294807104279, guid: 0c16780b049b2ae479675b721b4d0782, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479678294807104279, guid: 0c16780b049b2ae479675b721b4d0782, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479678294807104279, guid: 0c16780b049b2ae479675b721b4d0782, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479678294807104279, guid: 0c16780b049b2ae479675b721b4d0782, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 2400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
