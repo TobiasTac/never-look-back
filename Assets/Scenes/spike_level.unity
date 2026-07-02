@@ -2957,15 +2957,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.053124998
+    y: 0.041666668
+    width: 0.89374995
+    height: 0.9166667
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.1363635
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3012,8 +3012,8 @@ MonoBehaviour:
   m_AssetsPPU: 44
   m_RefResolutionX: 572
   m_RefResolutionY: 440
-  m_CropFrame: 0
-  m_GridSnapping: 0
+  m_CropFrame: 3
+  m_GridSnapping: 2
   m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
@@ -5955,11 +5955,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428498971903590112, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 3200
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 6428498971903590112, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 2400
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 6626558752085156156, guid: 97cdd8a28ad91234385e8e0ba18f4deb, type: 3}
       propertyPath: m_Name
