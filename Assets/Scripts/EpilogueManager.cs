@@ -1,57 +1,69 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class EpilogueManager : MonoBehaviour
 {
     [Header("Personagens")]
-    public Transform player;
+    public EpiloguePlayer epiloguePlayer;
     public Transform euridice;
     public Animator playerAnimator;
     public Animator euridiceAnimator;
 
     [Header("Câmera")]
     public Camera epilogueCamera;
-    public float cameraOffsetX = -4f; // player fica na esquerda da tela
+    public float cameraOffsetX = -4f;
     public float cameraSpeed = 5f;
 
     [Header("Textos")]
-    public Text[] epilogueTexts; // textos em ordem
-    public float[] textTriggerPositions; // posição X do player que aciona cada texto
+    public TMP_Text[] epilogueTexts;
+    public float[] textTriggerPositions;
     public float textFadeDuration = 0.8f;
     public float textDisplayDuration = 2f;
 
     [Header("Encontro Final")]
-    public float meetingPositionX; // posição X do meio da tela onde se encontram
+    public float playerMeetingX;
+    public float euridiceMeetingX;
     public float euridiceMoveSpeed = 2f;
     public float playerMoveSpeed = 2f;
     public string menuSceneName = "Menu";
 
+    [Header("Fade Final")]
+    public TMP_Text fadeImage; // se usar TMP para o fade também
+    public UnityEngine.UI.Image fadePanel; // painel preto do fade
+
     private bool[] textShown;
     private bool finalSequenceStarted = false;
     private bool cameraFollowing = true;
+    private Rigidbody2D playerRb;
+    private Transform playerTransform;
 
     void Start()
     {
+        playerRb = epiloguePlayer.GetComponent<Rigidbody2D>();
+        playerTransform = epiloguePlayer.transform;
+
         textShown = new bool[epilogueTexts.Length];
 
-        // Esconde todos os textos
-        foreach (Text t in epilogueTexts)
+        foreach (TMP_Text t in epilogueTexts)
             t.color = new Color(t.color.r, t.color.g, t.color.b, 0f);
 
-        // Euridice começa invisível no final da plataforma
-        SpriteRenderer euridiceSprite = euridice.GetComponent<SpriteRenderer>();
-        euridiceSprite.color = new Color(1f, 1f, 1f, 0f);
+        Collider2D euridiceCollider = euridice.GetComponent<Collider2D>();
+        if (euridiceCollider != null) euridiceCollider.enabled = false;
+
+        if (fadePanel != null)
+            fadePanel.color = new Color(0f, 0f, 0f, 0f);
     }
 
     void LateUpdate()
     {
-        // Câmera segue o player mantendo ele na esquerda
+        if (finalSequenceStarted) return;
+
         if (cameraFollowing)
         {
             Vector3 targetPos = new Vector3(
-                player.position.x - cameraOffsetX,
+                playerTransform.position.x - cameraOffsetX,
                 epilogueCamera.transform.position.y,
                 epilogueCamera.transform.position.z
             );
@@ -62,10 +74,11 @@ public class EpilogueManager : MonoBehaviour
             );
         }
 
-        // Verifica triggers de texto
         for (int i = 0; i < epilogueTexts.Length; i++)
         {
-            if (!textShown[i] && player.position.x >= textTriggerPositions[i])
+            if (i >= textTriggerPositions.Length) break;
+
+            if (!textShown[i] && playerTransform.position.x >= textTriggerPositions[i])
             {
                 textShown[i] = true;
                 StartCoroutine(ShowText(epilogueTexts[i]));
@@ -73,9 +86,8 @@ public class EpilogueManager : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowText(Text text)
+    private IEnumerator ShowText(TMP_Text text)
     {
-        // Fade in
         float elapsed = 0f;
         while (elapsed < textFadeDuration)
         {
@@ -87,7 +99,6 @@ public class EpilogueManager : MonoBehaviour
 
         yield return new WaitForSeconds(textDisplayDuration);
 
-        // Fade out
         elapsed = 0f;
         while (elapsed < textFadeDuration)
         {
@@ -100,7 +111,6 @@ public class EpilogueManager : MonoBehaviour
         text.color = new Color(text.color.r, text.color.g, text.color.b, 0f);
     }
 
-    // Chamado por um trigger no final da plataforma
     public void StartFinalSequence()
     {
         if (finalSequenceStarted) return;
@@ -110,87 +120,65 @@ public class EpilogueManager : MonoBehaviour
 
     private IEnumerator FinalSequence()
     {
-        // 1. Para o player
-        Player playerScript = player.GetComponent<Player>();
-        if (playerScript != null)
-        {
-            playerScript.canMove = false;
-            playerScript.movement = 0f;
-            playerScript.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-        }
-
-        // 2. Euridice faz fade in
-        yield return StartCoroutine(EuridiceFadeIn());
+        epiloguePlayer.Freeze();
 
         yield return new WaitForSeconds(0.5f);
 
-        // 3. Os dois caminham um em direção ao outro até o centro
         yield return StartCoroutine(WalkToMeeting());
 
         yield return new WaitForSeconds(1f);
 
-        // 4. Olham um para o outro
-        player.eulerAngles = new Vector3(0, 0, 0);   // player olha para direita
-        euridice.eulerAngles = new Vector3(0, 180, 0); // euridice olha para esquerda
-
-        yield return new WaitForSeconds(2f);
-
-        // 5. Fade e volta ao menu
         yield return StartCoroutine(FadeToMenu());
-    }
-
-    private IEnumerator EuridiceFadeIn()
-    {
-        SpriteRenderer euridiceSprite = euridice.GetComponent<SpriteRenderer>();
-        float elapsed = 0f;
-        float duration = 1.5f;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
-            euridiceSprite.color = new Color(1f, 1f, 1f, alpha);
-            yield return null;
-        }
     }
 
     private IEnumerator WalkToMeeting()
     {
-        cameraFollowing = false; // para a câmera durante o encontro
+        cameraFollowing = false;
 
-        // Anima os dois caminhando
         if (playerAnimator != null) playerAnimator.SetInteger("transition", 1);
         if (euridiceAnimator != null) euridiceAnimator.SetInteger("transition", 1);
 
-        float meetingX = meetingPositionX;
-
-        while (Mathf.Abs(player.position.x - meetingX) > 0.1f ||
-               Mathf.Abs(euridice.position.x - meetingX) > 0.1f)
+        while (Mathf.Abs(playerTransform.position.x - playerMeetingX) > 0.1f ||
+               Mathf.Abs(euridice.position.x - euridiceMeetingX) > 0.1f)
         {
-            // Move o player para a direita
-            if (player.position.x < meetingX)
-                player.position = Vector3.MoveTowards(player.position,
-                    new Vector3(meetingX, player.position.y, player.position.z),
-                    playerMoveSpeed * Time.deltaTime);
+            if (playerTransform.position.x < playerMeetingX)
+                playerRb.MovePosition(Vector2.MoveTowards(playerRb.position,
+                    new Vector2(playerMeetingX, playerRb.position.y),
+                    playerMoveSpeed * Time.fixedDeltaTime));
 
-            // Move a euridice para a esquerda
-            if (euridice.position.x > meetingX)
+            if (euridice.position.x > euridiceMeetingX)
                 euridice.position = Vector3.MoveTowards(euridice.position,
-                    new Vector3(meetingX, euridice.position.y, euridice.position.z),
+                    new Vector3(euridiceMeetingX, euridice.position.y, euridice.position.z),
                     euridiceMoveSpeed * Time.deltaTime);
 
             yield return null;
         }
 
-        // Para as animações
         if (playerAnimator != null) playerAnimator.SetInteger("transition", 0);
         if (euridiceAnimator != null) euridiceAnimator.SetInteger("transition", 0);
     }
 
     private IEnumerator FadeToMenu()
     {
-        // Reutiliza o fadeImage do Canvas se houver
         yield return new WaitForSeconds(1f);
+
+        if (fadePanel != null)
+        {
+            float elapsed = 0f;
+            float duration = 1.5f;
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                float alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
+                fadePanel.color = new Color(0f, 0f, 0f, alpha);
+                yield return null;
+            }
+
+            fadePanel.color = new Color(0f, 0f, 0f, 1f);
+            yield return new WaitForSeconds(0.5f);
+        }
+
         SceneManager.LoadScene(menuSceneName);
     }
 }

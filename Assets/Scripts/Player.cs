@@ -184,6 +184,11 @@ private bool isOnIce = false;
 
         ghost.Die();
     }
+    public void SetFacingDirection(int direction)
+    {
+        facingDirection = direction;
+        transform.eulerAngles = new Vector3(0, direction == 1 ? 0 : 180, 0);
+    }
     private IEnumerator RecoverControlRoutine(float time)
     {
         canMove = false;

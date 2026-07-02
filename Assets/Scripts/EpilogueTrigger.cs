@@ -8,7 +8,8 @@ public class EpilogueTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (triggered || !other.CompareTag("Player")) return;
+        Debug.Log($"Trigger acionado por: {other.gameObject.name} — Tag: {other.tag}");
+        if (triggered || !other.CompareTag("EpiloguePlayer")) return;
         triggered = true;
         epilogueManager.StartFinalSequence();
     }
