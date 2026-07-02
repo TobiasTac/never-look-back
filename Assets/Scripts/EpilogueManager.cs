@@ -18,9 +18,12 @@ public class EpilogueManager : MonoBehaviour
 
     [Header("Textos")]
     public TMP_Text[] epilogueTexts;
+    [Tooltip("Posição X onde o texto vai APARECER")]
     public float[] textTriggerPositions;
+    [Tooltip("Posição X onde o texto vai SUMIR")]
+    public float[] textHidePositions; 
     public float textFadeDuration = 0.8f;
-    public float textDisplayDuration = 2f;
+    // Removi o textDisplayDuration, pois agora não usaremos mais tempo!
 
     [Header("Encontro Final")]
     public float playerMeetingX;
@@ -30,10 +33,11 @@ public class EpilogueManager : MonoBehaviour
     public string menuSceneName = "Menu";
 
     [Header("Fade Final")]
-    public TMP_Text fadeImage; // se usar TMP para o fade também
-    public UnityEngine.UI.Image fadePanel; // painel preto do fade
+    public TMP_Text fadeImage; 
+    public UnityEngine.UI.Image fadePanel; 
 
     private bool[] textShown;
+    private bool[] textHidden; // Nova variável para saber se o texto já sumiu
     private bool finalSequenceStarted = false;
     private bool cameraFollowing = true;
     private Rigidbody2D playerRb;
@@ -44,8 +48,11 @@ public class EpilogueManager : MonoBehaviour
         playerRb = epiloguePlayer.GetComponent<Rigidbody2D>();
         playerTransform = epiloguePlayer.transform;
 
+        // Inicializa os arrays de controle
         textShown = new bool[epilogueTexts.Length];
+        textHidden = new bool[epilogueTexts.Length];
 
+        // Deixa todos os textos invisíveis no começo
         foreach (TMP_Text t in epilogueTexts)
             t.color = new Color(t.color.r, t.color.g, t.color.b, 0f);
 
@@ -60,6 +67,7 @@ public class EpilogueManager : MonoBehaviour
     {
         if (finalSequenceStarted) return;
 
+        // Lógica da Câmera
         if (cameraFollowing)
         {
             Vector3 targetPos = new Vector3(
@@ -74,19 +82,28 @@ public class EpilogueManager : MonoBehaviour
             );
         }
 
+        // Lógica de Aparecer e Sumir Textos
         for (int i = 0; i < epilogueTexts.Length; i++)
         {
-            if (i >= textTriggerPositions.Length) break;
-
-            if (!textShown[i] && playerTransform.position.x >= textTriggerPositions[i])
+            // Verifica se o texto deve APARECER
+            if (i < textTriggerPositions.Length && !textShown[i] && playerTransform.position.x >= textTriggerPositions[i])
             {
                 textShown[i] = true;
-                StartCoroutine(ShowText(epilogueTexts[i]));
+                StartCoroutine(FadeInText(epilogueTexts[i]));
+            }
+
+            // Verifica se o texto deve SUMIR
+            if (i < textHidePositions.Length && textShown[i] && !textHidden[i] && playerTransform.position.x >= textHidePositions[i])
+            {
+                textHidden[i] = true;
+                StartCoroutine(FadeOutText(epilogueTexts[i]));
             }
         }
     }
 
-    private IEnumerator ShowText(TMP_Text text)
+    // --- NOVAS COROUTINES DE TEXTO ---
+
+    private IEnumerator FadeInText(TMP_Text text)
     {
         float elapsed = 0f;
         while (elapsed < textFadeDuration)
@@ -96,10 +113,14 @@ public class EpilogueManager : MonoBehaviour
             text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
             yield return null;
         }
+        
+        // Garante que a opacidade fique em 100% no final
+        text.color = new Color(text.color.r, text.color.g, text.color.b, 1f);
+    }
 
-        yield return new WaitForSeconds(textDisplayDuration);
-
-        elapsed = 0f;
+    private IEnumerator FadeOutText(TMP_Text text)
+    {
+        float elapsed = 0f;
         while (elapsed < textFadeDuration)
         {
             elapsed += Time.deltaTime;
@@ -108,8 +129,11 @@ public class EpilogueManager : MonoBehaviour
             yield return null;
         }
 
+        // Garante que a opacidade fique em 0% no final
         text.color = new Color(text.color.r, text.color.g, text.color.b, 0f);
     }
+
+    // ---------------------------------
 
     public void StartFinalSequence()
     {
@@ -121,13 +145,9 @@ public class EpilogueManager : MonoBehaviour
     private IEnumerator FinalSequence()
     {
         epiloguePlayer.Freeze();
-
         yield return new WaitForSeconds(0.5f);
-
         yield return StartCoroutine(WalkToMeeting());
-
         yield return new WaitForSeconds(1f);
-
         yield return StartCoroutine(FadeToMenu());
     }
 

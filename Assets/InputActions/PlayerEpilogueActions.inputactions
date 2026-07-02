@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "PlayerEpilogueActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "e3b2df48-fd24-492b-9756-2e99b6b18218",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "2605a28d-468e-45a4-87c4-a2f6dfcbce17",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "2f69abd0-8fc4-4d16-9604-20957b9a321c",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "right",
+                    "id": "cf62476a-f998-4c22-941b-86afd84bba90",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

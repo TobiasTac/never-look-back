@@ -24,7 +24,9 @@ public class EpiloguePlayer : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        movement = value.Get<Vector2>().x;
+        float input = value.Get<Vector2>().x;
+        
+        movement = input < 0 ? 0f : input;
     }
 
     public void OnJump(InputValue value)

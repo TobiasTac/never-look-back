@@ -63,6 +63,10 @@ private bool isOnIce = false;
         var playerInput = GetComponent<PlayerInput>();
         playerInput.actions.Disable();
         playerInput.actions.FindActionMap("Player").Enable();
+
+        float sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        if (sfxSource != null) sfxSource.volume = sfxVolume;
+        if (loopSource != null) loopSource.volume = sfxVolume;
     }
 
     public void OnMove(InputValue value)

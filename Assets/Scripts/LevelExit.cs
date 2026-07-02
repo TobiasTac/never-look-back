@@ -17,6 +17,9 @@ public class LevelExit : MonoBehaviour
     public float enterDuration = 0.4f; // tempo para encolher
 
     private bool isExiting = false;
+    
+    [Header("Progresso")]
+    public int currentLevelIndex;
 
     void Start()
     {
@@ -24,9 +27,13 @@ public class LevelExit : MonoBehaviour
             fadeImage.color = new Color(0f, 0f, 0f, 0f);
     }
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player") || isExiting) return;
+
+        // Desbloqueia a próxima fase
+        LevelSelectManager.UnlockNextLevel(currentLevelIndex);
 
         Player player = other.GetComponent<Player>();
         Rigidbody2D playerRb = other.GetComponent<Rigidbody2D>();
@@ -35,7 +42,7 @@ public class LevelExit : MonoBehaviour
         if (playerRb != null)
         {
             playerRb.linearVelocity = Vector2.zero;
-            playerRb.bodyType = RigidbodyType2D.Kinematic; // desativa física durante a animação
+            playerRb.bodyType = RigidbodyType2D.Kinematic;
         }
 
         isExiting = true;
