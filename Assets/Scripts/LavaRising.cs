@@ -6,7 +6,22 @@ public class LavaRising : MonoBehaviour
     public float riseSpeed = 1f;
     public float topLimit; // posição Y onde a lava para
 
+    [Header("Áudio")]
+    public AudioClip lavaLoopSound;
+    private AudioSource audioSource;
+
     private bool rising = true;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
+        if (lavaLoopSound != null)
+        {
+            audioSource.clip = lavaLoopSound;
+            audioSource.Play();
+        }
+    }
 
     void Update()
     {

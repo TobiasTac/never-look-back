@@ -19,8 +19,14 @@ public class MagicObject : MonoBehaviour
     private Transform ghost;
     private Coroutine lightCoroutine;
 
+    [Header("Áudio")]
+    public AudioClip activationSound;
+    private AudioSource audioSource;
+
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
+
         foreach (Portal portal in portals)
             portal.Close(instant: true);
 
@@ -44,6 +50,12 @@ public class MagicObject : MonoBehaviour
         if (inRange && !isActive)
         {
             isActive = true;
+
+            if (activationSound != null)
+            {
+                audioSource.PlayOneShot(activationSound);
+            }
+            
             foreach (Portal portal in portals)
                 portal.Open();
 

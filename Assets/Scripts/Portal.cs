@@ -22,6 +22,26 @@ public class Portal : MonoBehaviour
     private Coroutine scaleCoroutine;
     private bool isOpen = false;
 
+    // [Header("Áudio")]
+    // public AudioClip portalLoopSound;
+    // public float soundDelay = 0.5f; // tempo pra runa "terminar" antes do loop começar
+    // private AudioSource loopSource;
+    // public float fadeInDuration = 1f;
+    // public float loopVolume = 0.6f;
+
+    // private AudioSource GetLoopSource()
+    // {
+    //     if (loopSource == null)
+    //     {
+    //         loopSource = gameObject.AddComponent<AudioSource>();
+    //         loopSource.volume = 0.6f;
+    //         loopSource.playOnAwake = false;
+    //         loopSource.loop = true;
+    //         loopSource.clip = portalLoopSound;
+    //     }
+    //     return loopSource;
+    // }
+
     void Awake()
     {
         // Só captura se ainda não foi salvo pelo Inspector
@@ -37,12 +57,42 @@ public class Portal : MonoBehaviour
 
         if (scaleCoroutine != null) StopCoroutine(scaleCoroutine);
         scaleCoroutine = StartCoroutine(ScaleTo(originalScale, openDuration));
+
+        // StartCoroutine(FadeInLoop());
     }
+
+    // private IEnumerator FadeInLoop()
+    // {
+    //     if (portalLoopSound == null) yield break;
+
+    //     var src = GetLoopSource();
+    //     src.volume = 0f;
+    //     src.Play();
+
+    //     float elapsed = 0f;
+    //     while (elapsed < fadeInDuration)
+    //     {
+    //         elapsed += Time.deltaTime;
+    //         src.volume = Mathf.Lerp(0f, loopVolume, elapsed / fadeInDuration);
+    //         yield return null;
+    //     }
+
+    //     src.volume = loopVolume;
+    // }
+
+    // private IEnumerator PlayLoopAfterDelay()
+    // {
+    //     yield return new WaitForSeconds(soundDelay);
+    //     if (portalLoopSound != null && !loopSource.isPlaying)
+    //         loopSource.Play();
+    // }
 
     public void Close(bool instant)
     {
         if (!isOpen && !instant) return;
         isOpen = false;
+
+        // GetLoopSource().Stop();
 
         if (instant)
         {

@@ -35,12 +35,26 @@ public class Player : MonoBehaviour
     public Transform groundCheck; // ponto embaixo do player
     public float groundCheckRadius = 0.1f;
 
+    [Header("Áudio")]
+    public AudioClip jumpSound;
+    public AudioClip deathSound;
+    public AudioClip runSound; 
+    public AudioSource sfxSource;   
+    public AudioSource loopSource;
+
 private bool isOnIce = false;
 
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        sfxSource.playOnAwake = false;
+        sfxSource.loop = false;
+
+        loopSource.playOnAwake = false;
+        loopSource.loop = true;
+        loopSource.clip = runSound;
 
         // Define orientação inicial
         facingDirection = startFacingRight ? 1 : -1;
@@ -76,6 +90,9 @@ private bool isOnIce = false;
         rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         isJumping = true;
         currentPlatform = null;
+
+        if (jumpSound != null)
+            sfxSource.PlayOneShot(jumpSound);
     }
 
     void FixedUpdate()
@@ -138,14 +155,41 @@ private bool isOnIce = false;
 
     void UpdateAnimations()
     {
-        if (isDead) return;
+        if (isDead) 
+        {
+            StopRunSound();
+            return;
+        }
 
-        if (isJumping)
+        if (isJumping) 
+        {
             anim.SetInteger("transition", 2);
+            StopRunSound();
+        }
         else if (Mathf.Abs(movement) > 0.01f)
+        {
             anim.SetInteger("transition", 1);
+            PlayRunSound();
+        }
         else
+        {
             anim.SetInteger("transition", 0);
+            StopRunSound();
+        }
+
+    }
+
+    private void PlayRunSound()
+    {
+        if (runSound == null) return;
+        if (!loopSource.isPlaying)
+            loopSource.Play();
+    }
+
+    private void StopRunSound()
+    {
+        if (loopSource.isPlaying)
+            loopSource.Stop();
     }
 
     public void InvertDirection()
@@ -170,6 +214,9 @@ private bool isOnIce = false;
         isDead = true;
         canMove = false;
         rig.linearVelocity = Vector2.zero;
+
+        if (deathSound != null)
+            sfxSource.PlayOneShot(deathSound);
 
         transform.eulerAngles = new Vector3(0, facingDirection == 1 ? 180 : 0, 0);
 
@@ -233,6 +280,10 @@ private bool isOnIce = false;
         canMove = false;
         rig.linearVelocity = Vector2.zero;
         anim.SetInteger("transition", 3); // animação de death direto
+
+        if (deathSound != null)
+            sfxSource.PlayOneShot(deathSound);
+
         Invoke(nameof(ReloadScene), 1f);
     }
 
