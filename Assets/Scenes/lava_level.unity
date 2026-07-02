@@ -6886,7 +6886,7 @@ MonoBehaviour:
   fadeDuration: 1
   moveToCenterDuration: 0.3
   enterDuration: 0.4
-  currentLevelIndex: 0
+  currentLevelIndex: 4
 --- !u!58 &1509713988
 CircleCollider2D:
   m_ObjectHideFlags: 0

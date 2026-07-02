@@ -7654,7 +7654,7 @@ MonoBehaviour:
   fadeDuration: 1
   moveToCenterDuration: 0.3
   enterDuration: 0.4
-  currentLevelIndex: 0
+  currentLevelIndex: 2
 --- !u!1001 &2143628194
 PrefabInstance:
   m_ObjectHideFlags: 0

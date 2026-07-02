@@ -34,6 +34,8 @@ public class Ghost : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         rig.gravityScale = 0f;
 
@@ -81,6 +83,11 @@ public class Ghost : MonoBehaviour
     public void Die()
     {
         if (isDead) return;
+
+        // Garante que as referências existem, mesmo se Start() não rodou ainda
+        if (rig == null) rig = GetComponent<Rigidbody2D>();
+        if (anim == null) anim = GetComponent<Animator>();
+        if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
 
         isDead = true;
         movement = Vector2.zero;

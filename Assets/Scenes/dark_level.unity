@@ -691,6 +691,10 @@ PrefabInstance:
       propertyPath: globalLight
       value: 
       objectReference: {fileID: 619394801}
+    - target: {fileID: 582137337478494820, guid: 1d645512977ec33408c4ac343bb1a2fb, type: 3}
+      propertyPath: reloadOnDeath
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1966465093317953843, guid: 1d645512977ec33408c4ac343bb1a2fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4349189

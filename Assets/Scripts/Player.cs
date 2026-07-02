@@ -228,10 +228,12 @@ private bool isOnIce = false;
 
         if (ghost == null)
         {
-            // Ghost não está na cena, apenas recarrega
             ReloadScene();
             yield break;
         }
+
+        if (!ghost.gameObject.activeSelf)
+            ghost.gameObject.SetActive(true); // garante que Start() rode antes do Die()
 
         ghost.Die();
     }
